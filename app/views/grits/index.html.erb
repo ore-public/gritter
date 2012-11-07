@@ -1,7 +1,4 @@
 <%- model_class = Grit -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
-</div>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -18,8 +15,6 @@
         <td><%= grit.body %></td>
         <td><%=l grit.created_at %></td>
         <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_grit_path(grit), :class => 'btn btn-mini' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       grit_path(grit),
                       :method => :delete,
